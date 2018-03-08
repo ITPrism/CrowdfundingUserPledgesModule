@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="utf-8"?>
+<extension type="module" version="3.6" client="site" method="upgrade">
+	<name>MOD_CROWDFUNDINGUSERPLEDGES</name>
+	<author>Todor Iliev</author>
+	<copyright>Copyright (C) 2017 Todor Iliev ( ITPrism.com )</copyright>
+	<license>http://www.gnu.org/licenses/gpl-3.0.en.html GNU/GPLv3</license>
+	<authorEmail>todor@itprism.com</authorEmail>
+	<authorUrl>http://itprism.com</authorUrl>
+	<version>2.1</version>
+	<creationDate>18 September, 2016</creationDate>
+	<description><![CDATA[
+    <p>Crowdfunding User Pledges is a module that displays projects for which the user has been pledged.</p>
+    <p><a href="http://itprism.com/" target="_blank">Subscribe for the newsletter</a> to receive <strong>gifts</strong>, <strong>discount codes</strong>, information about <strong>updates</strong> and information about <strong>new ITPrism extensions</strong>.</p>
+    <p>Please, <a href="http://extensions.joomla.org/extensions/extension/e-commerce/donations/crowdfunding" target="_blank">vote for the extension</a> on Joomla! Extensions Directory</p>
+    ]]></description>
+	
+    <help url="MOD_CROWDFUNDINGUSERPLEDGES_HELP_URL"/>
+
+	<files>
+	    <filename module="mod_crowdfundinguserpledges">mod_crowdfundinguserpledges.php</filename>
+        <filename>helper.php</filename>
+		
+        <folder>css</folder>
+        <folder>language</folder>
+        <folder>tmpl</folder>
+	</files>
+
+	<config>
+		<fields name="params">
+			<fieldset name="basic">
+                <field name="results_limit" type="text" label="MOD_CROWDFUNDINGUSERPLEDGES_RESULTS_LIMIT" description="MOD_CROWDFUNDINGUSERPLEDGES_RESULTS_LIMIT_DESC" default="3" />
+                <field name="show_author" default="" type="list" class="chzn-color" label="JGLOBAL_SHOW_AUTHOR_LABEL" description="MOD_CROWDFUNDINGUSERPLEDGES_SHOW_AUTHOR_DESC">
+                    <option	value="">JGLOBAL_USE_GLOBAL</option>
+                    <option	value="0">JHIDE</option>
+                    <option	value="1">JSHOW</option>
+                </field>
+                <field name="show_description" default="" type="list" class="chzn-color" label="MOD_CROWDFUNDINGUSERPLEDGES_SHOW_DESCRIPTION" description="MOD_CROWDFUNDINGUSERPLEDGES_SHOW_DESCRIPTION_DESC">
+                    <option	value="">JGLOBAL_USE_GLOBAL</option>
+                    <option	value="0">JHIDE</option>
+                    <option	value="1">JSHOW</option>
+                </field>
+                <field name="show_info" type="list" class="chzn-color" label="MOD_CROWDFUNDINGUSERPLEDGES_SHOW_INFORMATION" description="MOD_CROWDFUNDINGUSERPLEDGES_DISPLAY_INFORMATION_DESC" default="1">
+                    <option	value="0">JHIDE</option>
+                    <option	value="1">JSHOW</option>
+                </field>
+                <field name="show_readon" type="list" class="chzn-color" label="MOD_CROWDFUNDINGUSERPLEDGES_SHOW_READON" description="MOD_CROWDFUNDINGUSERPLEDGES_SHOW_READON_DESC" default="0">
+                    <option	value="0">JHIDE</option>
+                    <option	value="1">JSHOW</option>
+                </field>
+                <field name="show_see_projects" type="list" class="chzn-color" label="MOD_CROWDFUNDINGUSERPLEDGES_SHOW_SEE_PROJECTS" description="MOD_CROWDFUNDINGUSERPLEDGES_SHOW_SEE_PROJECTS_DESC" default="0">
+                    <option	value="0">JHIDE</option>
+                    <option	value="1">JSHOW</option>
+                </field>
+                <field name="title_length" type="text" label="MOD_CROWDFUNDINGUSERPLEDGES_TITLE_LENGTH" description="MOD_CROWDFUNDINGUSERPLEDGES_TITLE_LENGTH_DESC" default="" />
+                <field name="description_length" type="text" label="MOD_CROWDFUNDINGUSERPLEDGES_DESCRIPTION_LENGTH" description="MOD_CROWDFUNDINGUSERPLEDGES_DESCRIPTION_LENGTH_DESC" default="" />
+                <field name="image_type" type="list" label="MOD_CROWDFUNDINGUSERPLEDGES_IMAGE" description="MOD_CROWDFUNDINGUSERPLEDGES_IMAGE_DESC" default="square">
+                    <option value="none">MOD_CROWDFUNDINGUSERPLEDGES_NONE</option>
+                    <option value="square">MOD_CROWDFUNDINGUSERPLEDGES_SQUARE</option>
+                    <option value="small">MOD_CROWDFUNDINGUSERPLEDGES_SMALL</option>
+                    <option value="large">MOD_CROWDFUNDINGUSERPLEDGES_LARGE</option>
+                </field>
+                <field name="image_link" type="radio" class="btn-group" label="MOD_CROWDFUNDINGUSERPLEDGES_IMAGE_LINK" description="MOD_CROWDFUNDINGUSERPLEDGES_IMAGE_LINK_DESC" default="0">
+                    <option value="0">JNO</option>
+                    <option value="1">JYES</option>
+                </field>
+			</fieldset>
+			
+			<fieldset name="advanced">
+                <field
+                    name="layout"
+                    type="modulelayout"
+                    label="JFIELD_ALT_LAYOUT_LABEL"
+                    description="JFIELD_ALT_MODULE_LAYOUT_DESC" />
+
+                <field
+                    name="moduleclass_sfx"
+                    type="text"
+                    label="COM_MODULES_FIELD_MODULECLASS_SFX_LABEL"
+                    description="COM_MODULES_FIELD_MODULECLASS_SFX_DESC" />
+
+                <field
+                        name="cache"
+                        type="list"
+                        default="0"
+                        label="COM_MODULES_FIELD_CACHING_LABEL"
+                        description="COM_MODULES_FIELD_CACHING_DESC">
+                    <option value="0">COM_MODULES_FIELD_VALUE_NOCACHING</option>
+                </field>
+            </fieldset>
+		</fields>
+	</config>
+    <updateservers>
+        <server type="extension" priority="1" name="Module - Crowdfunding User Pledges ( from CDN )">http://cdn.itprism.com/updates/crowdfunding/modules/mod_crowdfundinguserpledges.xml</server>
+    </updateservers>
+</extension>
